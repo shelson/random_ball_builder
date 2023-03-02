@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 space_size = 500.0
 # com_z_offset is the distance below the centre point that the COM should be
 com_z_offset = 100.0
+# number of balls to create
+ball_count = 5
 
 class Ball:
     def __init__(self, mass, location):
@@ -42,7 +44,7 @@ centre_point = rs.Point3d(250, 250, 250)
 
 balls = []
 
-for i in range(0, 3):
+for i in range(0, ball_count):
     balls.append(get_random_ball())
 
 com = centre_of_mass(balls)
